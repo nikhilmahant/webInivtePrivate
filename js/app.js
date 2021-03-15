@@ -262,17 +262,62 @@ gsap.from('#flower3',{
    
   
 
+   
+    gsap.from('#clif',{
+        delay:0,
+        translateY:300
+    })
+  
+    gsap.from('#couple',{
+        
+        translateY:100
+    })
+  
+    if (document.documentElement.clientWidth < 745) {
+
+        gsap.from('#moon',{
+            translateY:300,
+            duration:3,
+            transformOrigin:'center',
+            ease:Back.easeOut.config(1.7),
+            })
+        gsap.to('#moon',{
+            translateY:100,
+            duration:3,
+            transformOrigin:'center',
+            ease:Back.easeOut.config(1.7),
+            })
+
+        gsap.from('#couple',{
+        
+            translateY:-300,
+            opacity:0,
+        })
+        gsap.to('#couple',{
+        
+            translateY:600,
+            opacity:1,
+        })
+
+        gsap.from('#clif',{
+            delay:0,
+            translateY:300
+        })
+        gsap.to('#clif',{
+            delay:0,
+            translateY:-65,
+            translateX:-80,
+        })
+        // scripts
+    }
+    
     gsap.from('.cover',{
-        delay:4,
+        delay:3,
         display:'none',
         opacity:0,
         color:'#FBB317'
 
     })
-  
-
-    
- 
     
     
 
